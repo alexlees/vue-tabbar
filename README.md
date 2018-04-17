@@ -1,6 +1,6 @@
 # vue-tabbar
 
-> A vue tabbar component for mobile.
+> A vue tabbar component for mobile.Based on Vue-router.
 
 ## Build Setup
 
@@ -8,7 +8,7 @@
 # install dependencies
 npm install vue-tabbar -s || yarn add vue-tabbar
 ```
-## [Demo]()
+## [Demo](https://alexlees.github.io/vue-tabbar/demo/)
 
 ## Usage
 ```javascript
@@ -126,3 +126,26 @@ export default {
 </style>
 
 ```
+## props
+> #### tabbar
+|  props  |  type  |  default |  desc |
+| - | :-: | -: | - |
+|  initIndex  |  Number  |  0 |  默认选中item  |
+
+|  event  |  desc  |  parms |
+| - | :-: | -: |
+|  direction  |  每次点击item   |  direction |
+|  change  |  每次点击item  |  current |
+
+
+> #### tabitem
+|  props  |  type  |  default |  desc |
+| - | :-: | -: | - |
+|  to  |  String  |  / | 跳转路由 |
+|  active  |  String  |  router-link-exact-active | 当前路由激活className  |
+
+|  event  |  desc  |  parms |
+| - | :-: | -: |
+|  -  |  -  |  - |
+
+> [github](https://github.com/alexlees)

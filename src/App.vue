@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <tabbar @change="change" @direction="directionChange">
+    <tabbar @change="change" @direction="directionChange" :initIndex="1">
       <tabitem to="/">
         <i class="iconfont icon-home_light" slot="icon"></i>
         <span>home</span>

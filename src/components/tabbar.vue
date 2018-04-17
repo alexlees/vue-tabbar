@@ -11,7 +11,7 @@ export default {
   props: {
     initIndex: {
       type: Number,
-      default: 1
+      default: 0
     }
   },
   name: NAME,
