@@ -9,12 +9,12 @@ const path = require('path')
 const chalk = require('chalk')
 const webpack = require('webpack')
 const config = require('../config')
-const webpackConfig = require('./webpack.prod.conf')
+const webpackConfig = require('./webpack.pkg.conf')
 
 const spinner = ora('building for pkg...')
 spinner.start()
 
-rm(path.join(config.src.assetsRoot, config.src.assetsSubDirectory), err => {
+rm(path.join(config.pkg.assetsRoot, config.pkg.assetsSubDirectory), err => {
   if (err) throw err
   webpack(webpackConfig, (err, stats) => {
     spinner.stop()
@@ -22,17 +22,17 @@ rm(path.join(config.src.assetsRoot, config.src.assetsSubDirectory), err => {
     process.stdout.write(stats.toString({
       colors: true,
       modules: false,
-      children: false, // If you are using ts-loader, setting this to true will make TypeScript errors show up during src.
+      children: false, // If you are using ts-loader, setting this to true will make TypeScript errors show up during pkg.
       chunks: false,
       chunkModules: false
     }) + '\n\n')
 
     if (stats.hasErrors()) {
-      console.log(chalk.red('  src failed with errors.\n'))
+      console.log(chalk.red('  pkg failed with errors.\n'))
       process.exit(1)
     }
 
-    console.log(chalk.cyan('  src complete.\n'))
+    console.log(chalk.cyan('  pkg complete.\n'))
     console.log(chalk.yellow(
       '  Tip: built files are meant to be served over an HTTP server.\n' +
       '  Opening index.html over file:// won\'t work.\n'

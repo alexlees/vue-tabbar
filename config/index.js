@@ -75,18 +75,18 @@ module.exports = {
   },
   pkg: {
     // Template for index.html
-    // index: path.resolve(__dirname, '../dist/index.html'),
+    index: path.resolve(__dirname, '../dist/index.html'),
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../pkg'),
-    assetsSubDirectory: './',
+    assetsSubDirectory: '',
     assetsPublicPath: './',
 
     /**
      * Source Maps
      */
 
-    productionSourceMap: true,
+    productionSourceMap: false,
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
 
