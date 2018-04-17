@@ -7,7 +7,7 @@
   "main": "pkg/index.js",
   "files": [
     "src/components",
-    "pkg",
+    "pkg/",
     "LICENSE"
   ],
   "scripts": {

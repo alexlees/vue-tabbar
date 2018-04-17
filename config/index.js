@@ -44,11 +44,10 @@ module.exports = {
   },
 
   build: {
-    // Template for index.html
-    index: path.resolve(__dirname, '../dist/index.html'),
+    index: path.resolve(__dirname, '../demo/index.html'),
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    assetsRoot: path.resolve(__dirname, '../demo'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
 
@@ -74,18 +73,13 @@ module.exports = {
     bundleAnalyzerReport: process.env.npm_config_report
   },
   pkg: {
-    // Template for index.html
-    index: path.resolve(__dirname, '../dist/index.html'),
-
     // Paths
     assetsRoot: path.resolve(__dirname, '../pkg'),
     assetsSubDirectory: '',
-    assetsPublicPath: './',
-
+    assetsPublicPath: '',
     /**
      * Source Maps
      */
-
     productionSourceMap: false,
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
